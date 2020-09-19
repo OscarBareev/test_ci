@@ -40,7 +40,7 @@ fun firstTypeOfCards(transferAmount: Int): Int {
 
 // Visa and Мир
 fun secondTypeOfCards(transferAmount: Int): Int {
-    return if (transferAmount * 0.0075 < 35_000) {
+    return if (transferAmount * 0.0075 < 35_000_000) {
         35_000_000
     } else {
         (transferAmount * 0.0075).toInt()
@@ -49,7 +49,7 @@ fun secondTypeOfCards(transferAmount: Int): Int {
 
 fun checkLimits(transferAmount: Int, lastPurchases: Int, cardType: String): Boolean {
     return if (cardType == "vkPay") {
-        transferAmount < 15_000 || lastPurchases < 40_000
+        transferAmount < 15_000_000 || lastPurchases < 40_000_000
     } else {
         transferAmount < 150_000_000 || lastPurchases < 600_000_000
     }
