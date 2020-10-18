@@ -8,7 +8,7 @@ fun main() {
 
 }
 
-fun calculatePrice(
+fun calculatePric(
     transferAmount: Int,
     cardType: String = "vkPay",
     lastPurchases: Int = 0,
